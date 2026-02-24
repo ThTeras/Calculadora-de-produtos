@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
         <link href="styles.css" rel="stylesheet"/>
         <title>Calculadora de produtos</title>
     </head>
@@ -9,14 +10,17 @@
 
         <!--inputs-->
         <div>
-            <label for="valorT">Valor total:</label><input type="number" name="valorT" placeholder="Valor"/><br />
-            <label for="quantidade">Quantidade de produtos:</label><input type="number" name="quantidade" placeholder="Quantidade"/><br />
-            <label for="descontoT">Valor do desconto:</label><input type="number" name="descontoT" placeholder="Desconto"/><br />
+            <label for="valorT">Valor total:</label><input type="number" name="valorT" id="valorT" placeholder="Valor"/><br />
+            <label for="quantidade">Quantidade de produtos:</label><input type="number" name="quantidade" id="quantidade" placeholder="Quantidade"/><br />
+            <label for="descontoT">Valor do desconto:</label><input type="number" name="descontoT" id="descontoT" placeholder="Desconto"/><br />
         </div>
 
         <!--outputs-->
         <div>
-
+            <p>Valor unitário corrigido: <span class="resultado"></span></p>
+            <p>Valor total corrigido: <span class="resultado"></span></p>
+            <p>Valor total corrigido menos desconto: <span class="resultado"></span></p>
+            <button onclick="calcular()">Calcular</button>
         </div>
 
         <script src="script.js"></script>
