@@ -2,25 +2,50 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-        <link href="styles.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css">
+        <link href="style/struct.css" rel="stylesheet"/>
+        <link href="style/light.css" rel="stylesheet"/>
         <title>Calculadora de produtos</title>
     </head>
 
     <body>
-
+        <div id="cabeca">
+            <h3>Calculadora de produtos</h3>
+            <button id="inversor" onclick="inverter()">&#9681;</button>
+        </div>
         <!--inputs-->
-        <div>
-            <label for="valorT">Valor total:</label><input type="number" name="valorT" id="valorT" placeholder="Valor"/><br />
-            <label for="quantidade">Quantidade de produtos:</label><input type="number" name="quantidade" id="quantidade" placeholder="Quantidade"/><br />
-            <label for="descontoT">Valor do desconto:</label><input type="number" name="descontoT" id="descontoT" placeholder="Desconto"/><br />
+        <div id="entradas">
+            <div class="linha">
+                <label for="valorT">Total:</label>
+                <input type="number" name="valorT" id="valorT" placeholder="Valor"/>
+            </div>
+            <div class="linha">
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" name="quantidade" id="quantidade" placeholder="Quantidade"/>
+            </div>
+            <div class="linha">
+                <label for="descontoT">Desconto:</label>
+                <input type="number" name="descontoT" id="descontoT" placeholder="Desconto"/>
+            </div>
+            <div class="linha">
+                <button onclick="calcular()" id="calculo"><b>Calcular</b></button>
+            </div>
         </div>
 
         <!--outputs-->
-        <div>
-            <p>Valor unitário corrigido: <span class="resultado"></span></p>
-            <p>Valor total corrigido: <span class="resultado"></span></p>
-            <p>Valor total corrigido menos desconto: <span class="resultado"></span></p>
-            <button onclick="calcular()">Calcular</button>
+        <div id="saidas">
+            <div class="linha">
+                <label>Valor corrigido uni.:</label>
+                <span class="resultado">R$ 0,00</span>
+            </div>
+            <div class="linha">
+                <label>Valor total corrigido:</label>
+                <span class="resultado">R$ 0,00</span>
+            </div>
+            <div class="linha">
+                <label>Valor final:</label>
+                <span class="resultado">R$ 0,00</span>
+            </div>
         </div>
 
         <script src="script.js"></script>
