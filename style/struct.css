@@ -1,0 +1,84 @@
+/*fonte*/
+
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+
+body,input,button{
+    font-family: 'Fira Code', monospace;
+}
+
+/*cabeca*/
+
+#cabeca{
+    position: absolute;
+    width: 100vw;
+    height: 10vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#inversor{
+    height: 10vh;
+    width: 10vh;
+    margin-right: 5vw;
+    font-size: 200%;
+    background: none;
+    border: none;
+}
+
+h3{
+    margin-left: 5vw;
+}
+
+#calculo{
+    width: 100%;
+}
+
+/*geral*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+#entradas,#saidas{
+    position: absolute;
+    width: 80vw;
+    left: 10vw;
+}
+
+/*entradas*/
+
+#entradas{
+    top: 12vh;
+}
+
+.linha{
+    display: flex;
+    justify-content: space-between;
+    height: 4vh;
+    margin-bottom: 2vh;
+}
+
+input{
+    border: none;
+    border-bottom: solid black 1px;
+    background: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+/*saidas*/
+
+#saidas{
+    top: 37vh;
+}
