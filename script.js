@@ -18,12 +18,12 @@ const real = new Intl.NumberFormat("pt-BR",{
 })
 
 function calcular() {
-    let valorT = document.getElementById("valorT").value,
-    quantidade = document.getElementById("quantidade").value,
-    descontoT = document.getElementById("descontoT").value,
+    let valorU = Number(document.getElementById("valorU").value),
+    quantidade = Number(document.getElementById("quantidade").value),
+    descontoT = Number(document.getElementById("descontoT").value),
     resultado = document.getElementsByClassName("resultado");
 
-    let valorU = valorT / quantidade;
+    let valorT = valorU * quantidade;
     let descontoU = descontoT / quantidade;
     let valorC = valorU + descontoU;
     let valorTC = valorC * quantidade;
